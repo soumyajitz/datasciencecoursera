@@ -35,3 +35,27 @@ good
 x<-c(1,2,3,NA,4,NA,5)
 y<-c("y","n","n",NA,"y",NA,"n")
 good <- complete.cases(x,y)
+x<- read.csv("hw1_data.csv")
+x[1:2,]
+nrow(x)
+tail(x,2)
+y<- x$Ozone
+bad <-is.na(y)
+z <- y[!bad]
+length(z)
+mean(z)
+a<-c(x$Ozone[x$Ozone])
+k<- data.frame(x$Ozone,x$Temp)
+colnames(k) <- c("Ozone","Temp")
+k1<- x[x$Ozone>31 & x$Temp>90,]
+k2<- k1$Solar.R
+bad <- is.na(k2)
+good<- k2[!bad]
+mean(good)
+k3 <-x[x$Month==6,]
+mean(k3$Temp)
+k4<- x[x$Month==5,]
+k5<-k4$Ozone
+bad<- is.na(k5)
+good <- k5[!bad]
+max(good)
