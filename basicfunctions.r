@@ -13,7 +13,7 @@ above <- function(x,n=10){
   use<-x>n
   x[use]
 }
-# Calculate the means of all columns of a data frame
+# Calculate the means of all columns of a data frames
 colmean <- function(y,removeNA = TRUE){
   nc <- ncol(y)
   nr  <- nrow(y)
