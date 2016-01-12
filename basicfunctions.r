@@ -23,3 +23,12 @@ colmean <- function(y,removeNA = TRUE){
   }
   means
 }
+
+myPower  <- function(n){
+  pow <- function(x){
+    x^n
+  }
+  pow
+}
+
+

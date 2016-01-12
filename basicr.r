@@ -59,3 +59,10 @@ k5<-k4$Ozone
 bad<- is.na(k5)
 good <- k5[!bad]
 max(good)
+#Dates and Times
+
+x<- Sys.time()
+p<-as.POSIXlt(x)
+names(unclass(p))
+p$sec
+p$min
