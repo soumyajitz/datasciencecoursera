@@ -4,6 +4,7 @@ pollutantmean<-function(directory,pollutant,id = 1:332){
   file_paths <- paste(directory, all_files, sep ="/")
   for(i in id){
     dir<-read.csv(file_paths[i],header = T,sep = ",")
+    #remove the NAs
     removeNA<-dir[!is.na(dir[,pollutant]),pollutant]
     total <-c(total,removeNA)
   }
