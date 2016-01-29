@@ -1,10 +1,3 @@
-# Removal of NA's
-naremoval<-function(naremove){
-  naremove <- data$Hospital.30.Day.Death..Mortality..Rates.from.Heart.Failure
-  naremove <- as.numeric(naremove)
-  naremove <- naremove[!is.na(naremove)] 
-}
-
 best <- function(state,outcome){
   if(nchar(state)>2){
     print("Enter State Abbreviation")
