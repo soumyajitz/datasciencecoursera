@@ -36,7 +36,7 @@ mergedData[with(mergedData,order(-V2))]
 #Q5
 quantile(mergedData$V2,probs = c(0.2,0.4,0.6,0.8,1))
 q <- mergedData$V2<=38
-
+#this xtabs will divide the data into groups
 xtabs(q ~ mergedData$Income.Group)
 
 
