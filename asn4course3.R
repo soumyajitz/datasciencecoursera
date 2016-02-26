@@ -20,3 +20,9 @@ mean(removeComma,na.rm = TRUE)
 #Q3
 countrys <- grep("^United",gdpData$X.3,value = T)
 length(countrys)
+
+#Q4
+eduData <- read.csv("edu.csv")
+matchedData <- merge(gdpData,eduData,by.x = "X",by.y = "CountryCode")
+june <- grep("Fiscal year end: June",matchedData$Special.Notes)
+length(june)
