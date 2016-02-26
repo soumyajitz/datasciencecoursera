@@ -26,3 +26,15 @@ eduData <- read.csv("edu.csv")
 matchedData <- merge(gdpData,eduData,by.x = "X",by.y = "CountryCode")
 june <- grep("Fiscal year end: June",matchedData$Special.Notes)
 length(june)
+
+#Q5
+install.packages("quantmod")
+library(quantmod)
+amzn = getSymbols("AMZN",auto.assign=FALSE)
+sampleTimes = index(amzn)
+
+data2012 <- grepl("2012-*",sampleTimes)
+length(data2012)
+subsetData2012 <- subset(sampleTimes,data2012)
+day <- format(subsetData2012,"%A")
+table(day)
