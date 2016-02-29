@@ -2,7 +2,6 @@
 title: "README.md"
 author: "Soumyajit Sarkar"
 date: "February 29, 2016"
-output: html_document
 ---
 
 Basic Instructions
