@@ -61,9 +61,15 @@ names(Data)<-gsub("Mag", "Magnitude", names(Data))
 names(Data)<-gsub("BodyBody", "Body", names(Data))
 
 # Create independent tidy dataset
-means <- as.vector(sapply(Data, mean ))
-names <- names(Data)
-means <- as.data.frame(cbind(names, means))
-names(means) <- c('variable', 'mean')
-write.table(means, "TidyData.txt", row.name=FALSE)
+Datatidy<-aggregate(. ~subject + activity, Data, mean)
+Datatidy<-Datatidy[order(Datatidy$subject,Datatidy$activity),]
+
+write.table(Datatidy, "TidyData.txt", row.name=FALSE)
+rm(tidyData)
 tidyData <- read.table("TidyData.txt")
+
+# 
+# means <- as.vector(sapply(Data, mean ))
+# names <- names(Data)
+# means <- as.data.frame(cbind(names, means))
+# names(means) <- c('variable', 'mean')
