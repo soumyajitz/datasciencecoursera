@@ -14,5 +14,3 @@ Github File Structure
 * run_analysis.R, The main running program file to execute to get results
 * README.md - contains basic instuctions
 * TidyData.txt - contains the final tidy dataset
-* CodeBook.html - html version of the CodeBook.md
-* README.html - html version of README.md
